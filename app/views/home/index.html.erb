@@ -1,0 +1,26 @@
+<div class="container">
+
+<div class = "dive">
+
+  <% @gossips.each do |gossip|%>
+
+    <div class="card text-center">
+      <div class="card-header">
+        Youpi des potins
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title"><%= gossip.title %></h5>
+        <p class="card-text"><%= gossip.user.first_name %> <%= gossip.user.last_name %></p>
+        <a href="<%=show_path(gossip.id)%>" class="btn btn-primary">Lire</a>
+      </div>
+
+      <div class="card-footer text-muted">
+        <%=gossip.created_at%>
+      </div>
+
+
+    </div>
+    </div>
+  <% end %>
+</div>
